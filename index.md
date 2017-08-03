@@ -1,3 +1,13 @@
+{% for item in site.data.samplelist.toc %}
+    <h3>{{ item.title }}</h3>
+      <ul>
+        {% for entry in item.subfolderitems %}
+          <li><a href="{{ entry.url }}">{{ entry.page }}</a></li>
+        {% endfor %}
+      </ul>
+  {% endfor %}
+
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/goodlux/goodlux.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
